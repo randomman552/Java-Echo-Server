@@ -5,10 +5,10 @@ The server echos back whatever is sent to it by the client.
 
 Server can be optionally provided a port number on start using the following execution method
 ```
-Server <port>
+java -jar ./Server.jar <port>
 ```
 
 Client can be optionally provided with a port number and host address
 ```
-Client <host> <port>
+java -jar ./Client.jar <host> <port>
 ```

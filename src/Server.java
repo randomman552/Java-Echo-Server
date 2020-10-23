@@ -4,6 +4,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.net.SocketException;
 
 public class Server {
     public static void main(String[] args) {
@@ -44,7 +45,7 @@ public class Server {
             socket.close();
             serverSocket.close();
 
-        } catch (IOException e) {
+        } catch (IOException | NullPointerException e) {
             System.err.println("Connection terminated by remote host");
             System.exit(-1);
         } catch (Exception e) {
